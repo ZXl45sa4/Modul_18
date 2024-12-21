@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} My Site {% endblock %}</title>
+    <link rel="stylesheet" href='{% static "css/style.css" %}'>
+</head>
+<body>
+    <header>
+        {% block header %}
+            <h1 align="center">Главная страница</h1>
+        {% endblock %}
+    </header>
+    <nav>
+        <p><a href="http://127.0.0.1:8002/platform"><h4>Главная</h4></a></p>
+        <p><a href="http://127.0.0.1:8002/platform/games"><h4>Магазин</h4></a></p>
+        <p><a href="http://127.0.0.1:8002/platform/cart"><h4>Корзина</h4></a></p>
+    </nav>
+    <main>
+        {% block content %}
+        <p>Контент</p>
+        {% endblock %}
+    </main>
+    <footer>
+        {% block footer %}
+        <p>2024 My Site</p>
+        {% endblock %}
+    </footer>
+</body>
+</html>
